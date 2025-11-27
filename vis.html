@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>舞蹈生成模型演示</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f5f5f5;
+    }
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section h2 {
+      margin-bottom: 20px;
+    }
+    .flow-container, .video-container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .flow-image {
+      width: 100%;
+      max-width: 600px;
+      display: block;
+      margin: 20px auto;
+      border-radius: 8px;
+    }
+    .subvideos {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    video {
+      width: 100%;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align:center; padding:40px 0; margin:0; font-size:32px; font-weight:600;">Music-to-dance Generation via Atomic Movements</h1>
+    <!-- Section 1: 流程展示 -->
+  <div class="section">
+    <h2>Framework overview</h2>
+    <div class="flow-container">
+      <p>Music input -> Structrual Parsing -> Atomic movement planning -> Dance Completion</p>
+      <img src="vis_video/prt1.png" alt="流程示意图" class="flow-image" />
+    </div>
+  </div>
+
+  <!-- Section 2: 原子动作可视化 -->
+  <div class="section">
+    <h2>Visualization of atomic movements</h2>
+    <div class="video-container">
+      <p>以下展示若干种原子动作示例：</p>
+      <div class="subvideos">
+        <div>
+          <video controls src="vis_video/atomicvisual/large_67.mkv"></video>
+          <p class="video-desc">Jazz-ballet style: spin</p>
+        </div>
+        <div>
+          <video controls src="vis_video/atomicvisual/large_82.mkv"></video>
+          <p class="video-desc">Krump style: sway with arms wide</p>
+        </div>
+        <div>
+          <video controls src="vis_video/atomicvisual/large_98.mkv"></video>
+          <p class="video-desc">House-dance style: high-knee</p>
+        </div>
+        <div>
+          <video controls src="vis_video/atomicvisual/small_55.mkv"></video>
+          <p class="video-desc">House-dance style: alternate lifting knees</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 3: 生成结果可视化 -->
+  <div class="section">
+    <h2>Visualization of generated dance sequence</h2>
+    <div class="video-container">
+      <video controls src="vis_video/final_redbox.mp4"></video>
+      <p>The model generate a typical instance of Jazz-ballet. The textual descriptions of the atomic movements are summarized by an LLM. However, each of these induced atomic movements corresponds to an actual existing dance primitive: <em>palms showing and waving</em> corresponds to the Jazz dance movement <strong>Jazz hands</strong>; <em>pricked turns</em> correspond to the jazz-ballet <strong>pique turns</strong>; <em>walk</em> corresponds to the Jazz dance <strong>Jazz walk</strong>; <em>jump with one leg extending</em> corresponds to the jazz-ballet <strong>jeté</strong>; <em>spin on the ground</em> is a typical <strong>floor roll</strong>; <em>extend one leg</em> corresponds to the jazz-ballet <strong>tilt</strong>.
+ </p>
+    </div>
+  </div>
+
+  <!-- Section 4: 编辑结果可视化 -->
+  <div class="section">
+    <h2>Visualization of edited results</h2>
+    <div class="video-container">
+      <video controls src="vis_video/final_res_edit.mp4"></video>
+      <p>This example demonstrates the visualization of the edited dance sequence. We replace the original atomic movements at the semantic-event level, and observe that the resulting dance remains coherent and fluid.</p>
+    </div>
+  </div>
+</body>
+</html>
+
+
+ 
