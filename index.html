@@ -47,7 +47,14 @@
 </head>
 <body>
   <h1 style="text-align:center; padding:40px 0; margin:0; font-size:32px; font-weight:600;">Music-to-dance Generation via Atomic Movements</h1>
-
+  <div class="section">
+    <h2>General Visualization</h2>
+    <div class="video-container">
+      <video controls src="vis_video/1129/four_people.mp4"></video>
+    </div>
+  </div>
+  
+  
   <div class="section">
     <h2>Framework overview</h2>
     <div class="flow-container">
@@ -59,42 +66,38 @@
   <div class="section">
     <h2>Visualization of atomic movements</h2>
     <div class="video-container">
+      <p>We show atomic movements in a prototype, which are similar but meanwhile various in details.</p>
       <div class="subvideos">
         <div>
-          <video controls src="vis_video/atomicvisual/large_67.mkv"></video>
-          <p class="video-desc">Jazz-ballet style: spin</p>
+          <video controls src="vis_video/1129/1atomic0001-0040.mkv"></video>
+          <p class="video-desc">Locking style: arm stretch</p>
         </div>
         <div>
-          <video controls src="vis_video/atomicvisual/large_82.mkv"></video>
-          <p class="video-desc">Krump style: sway with arms wide</p>
-        </div>
-        <div>
-          <video controls src="vis_video/atomicvisual/large_98.mkv"></video>
-          <p class="video-desc">House-dance style: high-knee</p>
-        </div>
-        <div>
-          <video controls src="vis_video/atomicvisual/small_55.mkv"></video>
-          <p class="video-desc">House-dance style: alternate lifting knees</p>
+          <video controls src="vis_video/1129/2atomic0001-0025.mkv"></video>
+          <p class="video-desc">Middle-hip-hop style: gliding, shuffle arms</p>
         </div>
       </div>
     </div>
   </div>
 
-
   <div class="section">
     <h2>Visualization of generated dance sequence</h2>
     <div class="video-container">
-      <video controls src="vis_video/final_redbox.mp4"></video>
-      <p>The model generates a typical instance of Jazz-ballet. The textual descriptions of the atomic movements are summarized by an LLM. However, each of these induced atomic movements corresponds to an actual existing dance primitive: <em>palms showing and waving</em> corresponds to the Jazz dance movement <strong>Jazz hands</strong>; <em>pricked turns</em> correspond to the jazz-ballet <strong>pique turns</strong>; <em>walk</em> corresponds to the Jazz dance <strong>Jazz walk</strong>; <em>jump with one leg extending</em> corresponds to the jazz-ballet <strong>jeté</strong>; <em>spin on the ground</em> is a typical <strong>floor roll</strong>; <em>extend one leg</em> corresponds to the jazz-ballet <strong>tilt</strong>.
+      <video controls src="vis_video/1129/1129_gen.mp4"></video>
+      <p>The model generate a typical instance of Jazz-ballet. The textual descriptions of the atomic movements are summarized by an LLM. However, each of these induced atomic movements corresponds to an actual existing dance primitive: <em>palms showing and waving</em> corresponds to the Jazz dance movement <strong>Jazz hands</strong>; <em>pricked turns</em> correspond to the jazz-ballet <strong>pique turns</strong>; <em>walk</em> corresponds to the Jazz dance <strong>Jazz walk</strong>; <em>jump with one leg extending</em> corresponds to the jazz-ballet <strong>jeté</strong>; <em>spin on the ground</em> is a typical <strong>floor roll</strong>; <em>extend one leg</em> corresponds to the jazz-ballet <strong>tilt</strong>.
  </p>
     </div>
   </div>
 
   <div class="section">
-    <h2>Visualization of edited results</h2>
+    <h2>Visualization of edited results on different scales</h2>
     <div class="video-container">
-      <video controls src="vis_video/final_res_edit.mp4"></video>
+      <video controls src="vis_video/1129/1129_edit1.mp4"></video>
       <p>This example demonstrates the visualization of the edited dance sequence. We replace the original atomic movements at the semantic-event level, and observe that the resulting dance remains coherent and fluid.</p>
+    </div>
+    <div class="video-container">
+      <video controls src="vis_video/1129/1129_motifedit.mp4"></video>
+      <p>This example demonstrates the visualization of the edited dance sequence. We are also capable of editing at a whole-motif level.</p>
     </div>
   </div>
 </body>
@@ -102,4 +105,3 @@
 
 
  
-
