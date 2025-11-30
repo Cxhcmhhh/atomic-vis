@@ -48,9 +48,15 @@
 <body>
   <h1 style="text-align:center; padding:40px 0; margin:0; font-size:32px; font-weight:600;">Music-to-dance Generation via Atomic Movements</h1>
   <div class="section">
-    <h2>General Visualization</h2>
+    <h2>3D-Based Music-to-Dance Generation</h2>
     <div class="video-container">
       <video controls src="vis_video/1129/four_people.mp4"></video>
+      <p><strong>Pros of 3D-based dance generation:</strong></p>
+      <ul>
+        <li>Flexible character configuration.</li>
+        <li>Spatiotemporal ID preservation and physically plausible motion control.</li>
+        <li>Flexible control over camera movement and viewpoints.</li>
+      </ul>
     </div>
   </div>
   
@@ -60,30 +66,33 @@
     <div class="flow-container">
       <p>Music input -> Structrual Parsing -> Atomic movement planning -> Dance Completion</p>
       <img src="vis_video/prt1.png" alt="流程示意图" class="flow-image" />
+      <p><strong>Advantages:</strong></p>
+      <ul>
+        <li>Structural consistency with the input music.</li>
+        <li>Atomic movements exhibit reasonable intra-class diversity.</li>
+          <div class="video-container">
+            <p>We show atomic movements in a prototype, which are similar but meanwhile various in details.</p>
+            <div class="subvideos">
+              <div>
+                <video controls src="vis_video/1129/1atomic0001-0040.mkv"></video>
+                <p class="video-desc">Locking style: arm stretch</p>
+              </div>
+              <div>
+                <video controls src="vis_video/1129/2atomic0001-0025.mkv"></video>
+                <p class="video-desc">Middle-hip-hop style: gliding, shuffle arms</p>
+              </div>
+            </div>
+          </div>
+        <li>Flexible, multi-level controllable editing capabilities.</li>
+      </ul>
     </div>
   </div>
 
-  <div class="section">
-    <h2>Visualization of atomic movements</h2>
-    <div class="video-container">
-      <p>We show atomic movements in a prototype, which are similar but meanwhile various in details.</p>
-      <div class="subvideos">
-        <div>
-          <video controls src="vis_video/1129/1atomic0001-0040.mkv"></video>
-          <p class="video-desc">Locking style: arm stretch</p>
-        </div>
-        <div>
-          <video controls src="vis_video/1129/2atomic0001-0025.mkv"></video>
-          <p class="video-desc">Middle-hip-hop style: gliding, shuffle arms</p>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <div class="section">
     <h2>Visualization of generated dance sequence</h2>
     <div class="video-container">
-      <video controls src="vis_video/1129/1129_gen.mp4"></video>
+      <video controls src="vis_video/1129/1130gen.mp4"></video>
       <p>The model generates a typical instance of Jazz-ballet. The textual descriptions of the atomic movements are summarized by an LLM. However, each of these induced atomic movements corresponds to an actual existing dance primitive: <em>palms showing and waving</em> corresponds to the Jazz dance movement <strong>Jazz hands</strong>; <em>pricked turns</em> correspond to the jazz-ballet <strong>pique turns</strong>; <em>walk</em> corresponds to the Jazz dance <strong>Jazz walk</strong>; <em>jump with one leg extending</em> corresponds to the jazz-ballet <strong>jeté</strong>; <em>spin on the ground</em> is a typical <strong>floor roll</strong>; <em>extend one leg</em> corresponds to the jazz-ballet <strong>tilt</strong>.
  </p>
     </div>
@@ -105,4 +114,3 @@
 
 
  
-
